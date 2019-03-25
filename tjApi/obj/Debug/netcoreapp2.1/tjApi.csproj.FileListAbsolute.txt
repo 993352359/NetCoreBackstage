@@ -1,0 +1,15 @@
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi\bin\Debug\netcoreapp2.1\tjApi.deps.json
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi\bin\Debug\netcoreapp2.1\tjApi.runtimeconfig.json
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi\bin\Debug\netcoreapp2.1\tjApi.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi\bin\Debug\netcoreapp2.1\tjApi.dll
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi\bin\Debug\netcoreapp2.1\tjApi.pdb
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi\obj\Debug\netcoreapp2.1\tjApi.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi\obj\Debug\netcoreapp2.1\tjApi.RazorAssemblyInfo.cache
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi\obj\Debug\netcoreapp2.1\tjApi.RazorAssemblyInfo.cs
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi\obj\Debug\netcoreapp2.1\tjApi.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi\obj\Debug\netcoreapp2.1\tjApi.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi\obj\Debug\netcoreapp2.1\tjApi.RazorTargetAssemblyInfo.cache
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi\obj\Debug\netcoreapp2.1\tjApi.dll
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi\obj\Debug\netcoreapp2.1\tjApi.pdb
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi\bin\Debug\netcoreapp2.1\tjApi.xml
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi\obj\Debug\netcoreapp2.1\tjApi.csprojAssemblyReference.cache

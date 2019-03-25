@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>tjApi</name>
+    </assembly>
+    <members>
+        <member name="M:tjApi.Controllers.ValuesController.Get(System.Object)">
+            <summary>
+            get请求
+            </summary>
+            <param name="isok">名字</param>
+            <response code="200">正确返回</response>
+            <remarks>测试备注</remarks>
+        </member>
+        <member name="M:tjApi.Controllers.ValuesController.Post">
+            <summary>
+            post请求
+            </summary>
+            <returns>返回post</returns>
+        </member>
+        <member name="T:tjApi.TokenEntity">
+            <summary>
+            token实体
+            </summary>
+        </member>
+        <member name="P:tjApi.TokenEntity.access_token">
+            <summary>
+            token字符串
+            </summary>
+        </member>
+        <member name="P:tjApi.TokenEntity.expires_in">
+            <summary>
+            过期时差
+            </summary>
+        </member>
+        <member name="T:tjApi.TokenProvider">
+            <summary>
+            token提供类
+            </summary>
+        </member>
+        <member name="M:tjApi.TokenProvider.GenerateToken(Microsoft.AspNetCore.Http.HttpContext,System.String,System.String,System.String)">
+            <summary>
+            生成令牌
+            </summary>
+            <param name="context">http上下文</param>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+            <param name="role">角色</param>
+            <returns></returns>
+        </member>
+        <member name="M:tjApi.TokenProvider.Getidentity(System.String)">
+            <summary>
+            查看令牌是否存在
+            </summary>
+            <param name="username">用户名</param>
+            <returns></returns>
+        </member>
+        <member name="T:tjApi.TokenProviderOptions">
+            <summary>
+            token提供属性
+            </summary>
+        </member>
+        <member name="P:tjApi.TokenProviderOptions.Issuer">
+            <summary>
+            发行人
+            </summary>
+        </member>
+        <member name="P:tjApi.TokenProviderOptions.Audience">
+            <summary>
+            订阅人
+            </summary>
+        </member>
+        <member name="P:tjApi.TokenProviderOptions.Expiration">
+            <summary>
+            过期时间间隔
+            </summary>
+        </member>
+        <member name="P:tjApi.TokenProviderOptions.SigningCredentials">
+            <summary>
+            签名证书
+            </summary>
+        </member>
+    </members>
+</doc>
