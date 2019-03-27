@@ -4,19 +4,10 @@
         <name>tjApi</name>
     </assembly>
     <members>
-        <member name="M:tjApi.Controllers.ValuesController.Get(System.Object)">
+        <member name="T:tjApi.Controllers.TokenController">
             <summary>
-            get请求
+            测试
             </summary>
-            <param name="isok">名字</param>
-            <response code="200">正确返回</response>
-            <remarks>测试备注</remarks>
-        </member>
-        <member name="M:tjApi.Controllers.ValuesController.Post">
-            <summary>
-            post请求
-            </summary>
-            <returns>返回post</returns>
         </member>
         <member name="T:tjApi.TokenEntity">
             <summary>

@@ -29,6 +29,16 @@ namespace tjApi
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddMvcCore().AddApiExplorer();
+            #region 跨域
+            services.AddCors(option => {
+                option.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                      .AllowAnyMethod()
+                      .AllowAnyHeader()
+                      .AllowCredentials()
+                .Build());
+            });
+            #endregion
             #region jwt身份验证
             //自定义密钥
             var secretKey = "ThisIsASecretKeyForAspNetCoreAPIToken";
@@ -69,14 +79,17 @@ namespace tjApi
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseMvc();
             //身份验证启用
             app.UseAuthentication();
+            //跨域启用
+            app.UseCors("CorsPolicy");
             //Seagger启用
             app.UseSwagger();
             app.UseSwaggerUI(c => {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "tjApi");
             });
-            app.UseMvc();
+            
         }
     }
 }
