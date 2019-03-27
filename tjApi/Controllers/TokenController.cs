@@ -61,9 +61,9 @@ namespace tjApi.Controllers
                 new Claim(JwtRegisteredClaimNames.Birthdate, user.Birthdate.ToString("yyyy-MM-dd")),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
-            var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("ThisIsASecretKeyForAspNetCoreAPIToken"));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var token = new JwtSecurityToken("audience", "audience",claims:claims,expires: DateTime.Now.AddMinutes(30), signingCredentials: creds);
+            var token = new JwtSecurityToken(_config["Jwt:Issuer"], _config["Jwt:Issuer"], claims:claims,expires: DateTime.Now.AddMinutes(30), signingCredentials: creds);
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 

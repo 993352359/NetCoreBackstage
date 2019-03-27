@@ -41,9 +41,9 @@ namespace tjApi
             #endregion
             #region jwt身份验证
             //自定义密钥
-            var secretKey = "ThisIsASecretKeyForAspNetCoreAPIToken";
+            //var secretKey = "ThisIsASecretKeyForAspNetCoreAPIToken";
             //生成SymmetricSecurityKey密钥
-            var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey));
+            //var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey));
             services.AddAuthentication(options =>
             {
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -52,15 +52,15 @@ namespace tjApi
             {
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = signingKey,
                     ValidateIssuer = true,
-                    ValidIssuer = "issuer",
                     ValidateAudience = true,
-                    ValidAudience = "audience",
                     ValidateLifetime = true,
-                    ClockSkew = TimeSpan.Zero
-                };
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = Configuration["Jwt:Issuer"],
+                    ValidAudience = Configuration["Jwt:Issuer"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
+                //ClockSkew = TimeSpan.Zero
+            };
             });
             #endregion
             #region 使用Swagger提供Api文档
@@ -79,9 +79,9 @@ namespace tjApi
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseMvc();
             //身份验证启用
             app.UseAuthentication();
+            app.UseMvc();
             //跨域启用
             app.UseCors("CorsPolicy");
             //Seagger启用
