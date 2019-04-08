@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 
 namespace tjApi.Controllers
 {
@@ -29,18 +30,21 @@ namespace tjApi.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public IActionResult CreateToken([FromBody]LoginModel login)
+        //public IActionResult CreateToken([FromBody]LoginModel login)
+        public JsonResult CreateToken(LoginModel login)
         {
-            IActionResult response = Unauthorized();
+            var tokenString = "";
             var user = Authenticate(login);
             if (user != null)
             {
-                var tokenString = BuildToken(user);
-                response = Ok(new { token = tokenString });
+                tokenString = BuildToken(user);
             }
-            return response;
+            var reseult = new JsonResult(new { token = tokenString });
+            return reseult;
         }
 
+        [AllowAnonymous]
+        [HttpGet]
         private UserModel Authenticate(LoginModel login)
         {
             UserModel user = null;
@@ -51,6 +55,7 @@ namespace tjApi.Controllers
             return user;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public string BuildToken(UserModel user)
         {

@@ -30,9 +30,12 @@ namespace tjApi
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddMvcCore().AddApiExplorer();
             #region 跨域
-            services.AddCors(option => {
-                option.AddPolicy("CorsPolicy",
-                    builder => builder.AllowAnyOrigin()
+            services.AddCors(option =>
+            {
+            option.AddPolicy("*",
+                builder =>
+                    builder.WithOrigins("http://localhost:8080")
+                        //builder.AllowAnyOrigin()
                       .AllowAnyMethod()
                       .AllowAnyHeader()
                       .AllowCredentials()
@@ -81,9 +84,9 @@ namespace tjApi
             }
             //身份验证启用
             app.UseAuthentication();
-            app.UseMvc();
             //跨域启用
-            app.UseCors("CorsPolicy");
+            app.UseCors("*");
+            app.UseMvc();
             //Seagger启用
             app.UseSwagger();
             app.UseSwaggerUI(c => {

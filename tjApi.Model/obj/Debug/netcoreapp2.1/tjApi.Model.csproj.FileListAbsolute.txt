@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi.Model\bin\Debug\netcoreapp2.1\tjApi.Model.deps.json
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi.Model\bin\Debug\netcoreapp2.1\tjApi.Model.dll
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi.Model\bin\Debug\netcoreapp2.1\tjApi.Model.pdb
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi.Model\obj\Debug\netcoreapp2.1\tjApi.Model.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi.Model\obj\Debug\netcoreapp2.1\tjApi.Model.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi.Model\obj\Debug\netcoreapp2.1\tjApi.Model.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi.Model\obj\Debug\netcoreapp2.1\tjApi.Model.dll
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi.Model\obj\Debug\netcoreapp2.1\tjApi.Model.pdb
+C:\Users\Administrator\Desktop\Vue\tjApi\tjApi.Model\obj\Debug\netcoreapp2.1\tjApi.Model.csprojAssemblyReference.cache
